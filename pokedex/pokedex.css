@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--clr-gray);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+button{
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--clr-gray);
+}
+
+header{
+    padding-block: 1rem;
+    box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, .5);
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    padding-inline: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.btn-header{
+    background-color: var(--clr-gray);
+    padding: .5rem;
+    border-radius: 100vmax;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+    transition: .2s;
+}
+
+.btn-header:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+}
+
+main{
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pokemon-todos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 470px) {
+    .pokemon-todos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .pokemon-todos{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.pokemon{
+    border-radius: 1rem;
+    background-color: var(--clr-white);
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
+    padding-block: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    /* isolation funciona en conjunto con z-index, para que no se vaya mas atras que el propio elemento, en este caso la tarjeta*/
+    isolation: isolate;
+    /*para que no se vea lo que sobresale del numero, en este caso #025*/
+    overflow: hidden;
+}
+
+.pokemon-id-back{
+    position: absolute;
+    top: 1rem;
+    /*primero movemos un 50% con respecto al elemento padre y despues movemos un 50% de su propio ancho*/
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--clr-gray);
+    z-index: -1;
+}
+
+.pokemon-imagen{
+    padding-inline: 1rem;
+    /*estamos dejando la imagen central siempre en el medio*/
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon-imagen img{
+    width: 100%;
+    max-width: 6rem;
+}
+
+.pokemon-info{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-inline: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.nombre-contenedor{
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-id{
+    background-color: var(--clr-gray);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.pokemon-nombre{
+    font-size: 1.4rem;
+}
+
+.pokemon-tipos{
+    display: flex;
+    gap: .5rem;
+    font-size: .75rem;
+    font-weight: 500;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tipo{
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+.pokemon-stats{
+    display: flex;
+    gap: 1rem;
+    font-size: .85rem;
+}
+
+.stat{
+    background-color: var(--clr-gray);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+
+.normal{
+    background-color: rgb(198, 219, 56);
+}
+
+.fire{
+    background-color: rgb(255, 97, 39);
+}
+
+.water{
+    background-color: rgb(0, 191, 255);
+}
+.grass{
+    background-color: rgb(75, 219, 56);
+}
+
+.electric{
+    background-color: rgb(244, 255, 39);
+}
+
+.ice{
+    background-color: rgb(106, 249, 253);
+}
+
+.fighting{
+    background-color: rgb(247, 35, 35);
+}
+
+.poison{
+    background-color: rgb(235, 23, 200);
+}
+
+.ground{
+    background-color: rgb(240, 246, 85);
+}
+.flying{
+    background-color: rgb(224, 170, 220);
+}
+
+.psychic{
+    background-color: rgb(250, 86, 141);
+}
+
+.bug{
+    background-color: rgb(167, 239, 41);
+}
+.rock{
+    background-color: rgb(242, 199, 6);
+}
+
+.ghost{
+    background-color: rgb(134, 7, 184);
+}
+
+.dark{
+    background-color: rgb(80, 45, 1);
+}
+.dragon{
+    background-color: rgb(163, 12, 227);
+}
+
+.steel{
+    background-color: rgb(175, 175, 173);
+}
+
+.fairy{
+    background-color: rgb(255, 147, 215);
+}
