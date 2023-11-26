@@ -65,5 +65,45 @@ console.log(persona1);
 let final= persona1.pop();
 console.log(persona1);
 
+//para quitar elementos al principio
 let inicio = persona1.shift();
 console.log(persona1);
+
+//POO
+//-abstraccion: simplificar las caracteristicas del objeto
+//-modularizacion: seccionar un problema grande en tareas faciles
+//-encapsulamiento: toda la info queda privado asi el usuario no ingresa facilmente
+//-polimorfismo: es como un objeto se comporta de manera distinta ante el mismo metodo
+
+class comida{
+    constructor(id, nombre, color){
+        this.id = id;
+        this.nombre = nombre;
+        this.color = color;
+    }
+
+        nombrar(){
+            return '${this.nombre} de color{this.color}';
+    }
+}
+class galleta extends comida{
+    constructor(id, nombre, color, sabor){
+        super (id, nombre, color);
+        this.sabor = sabor;
+    }
+    nombrarGalleta(){
+        return 'galletas ${this.nombre}sabor ${this.sabor}';
+    }
+}
+
+const manzana = new comida(1, "manzana", "rojo");
+const pera = new comida(2, "pera", "verde");
+
+const oreo = new galleta(3, "oreos", "negro", "chocolate");
+const chokis = new galleta(4, "chokis", "marron", "vainilla");
+
+console.log(manzana);
+console.log(pera)
+console.log(oreo.nombrarGalleta());
+console.log(chokis.nombrarGalleta());
+
