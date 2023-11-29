@@ -1,6 +1,6 @@
 let contador = 0;
 
-const valor = document.querySelector(".valor");  // Cambié #valor a .valor
+const valor = document.querySelectorById("#valor");
 const botones = document.querySelectorAll(".boton");
 
 botones.forEach(boton => {
